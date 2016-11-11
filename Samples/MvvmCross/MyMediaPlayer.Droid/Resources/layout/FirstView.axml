@@ -16,4 +16,11 @@
     android:textSize="40dp"
     local:MvxBind="Text Hello"
     />
+  <Button
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Play"
+      android:textSize="40dp"
+      local:MvxBind="Click PlayFileCommand"
+      />
 </LinearLayout>

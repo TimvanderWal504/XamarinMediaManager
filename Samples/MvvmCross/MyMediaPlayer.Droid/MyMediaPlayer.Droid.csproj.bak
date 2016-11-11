@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>MyMediaPlayer.Droid</RootNamespace>
     <AssemblyName>MyMediaPlayer.Droid</AssemblyName>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -72,10 +72,6 @@
       <HintPath>..\..\..\packages\MvvmCross.Platform.4.4.0\lib\MonoAndroid\MvvmCross.Platform.Droid.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Plugin.MediaManager.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\MediaManager\Plugin.MediaManager.iOS\bin\iPhone\Debug\Plugin.MediaManager.Abstractions.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -114,14 +110,6 @@
     <AndroidResource Include="Resources\drawable\splash.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\MediaManager\Plugin.MediaManager.Android\Plugin.MediaManager.Android.csproj">
-      <Project>{56A56F17-7DE1-4CA1-9617-BF32E971AC84}</Project>
-      <Name>Plugin.MediaManager.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\MediaManager\Plugin.MediaManager.ExoPlayer\Plugin.MediaManager.ExoPlayer.csproj">
-      <Project>{06EF2F1F-8A8E-47D6-9FC8-BBC521783F13}</Project>
-      <Name>Plugin.MediaManager.ExoPlayer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MyMediaPlayer.Core\MyMediaPlayer.Core.csproj">
       <Project>{66B081CB-DAD5-4FDF-B361-4BA85B440886}</Project>
       <Name>MyMediaPlayer.Core</Name>
