@@ -23,4 +23,10 @@
       android:textSize="40dp"
       local:MvxBind="Click PlayFileCommand"
       />
+  <TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textSize="40dp"
+    local:MvxBind="Text BufferPosition"
+    />
 </LinearLayout>

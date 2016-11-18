@@ -56,6 +56,25 @@ namespace MyMediaPlayer.Core.ViewModels
             MediaPlayer = CrossMediaManager.Current;
 
             Queue.Add(new MediaFile() {Type = MediaFileType.AudioUrl, Url = "http://www.montemagno.com/sample.mp3" });
+            MediaPlayer.BufferingChanged += MediaPlayer_BufferingChanged;
+        }
+
+        private void MediaPlayer_BufferingChanged(object sender, Plugin.MediaManager.Abstractions.EventArguments.BufferingChangedEventArgs e)
+        {
+            BufferPosition = Downloaded.ToString();
+        }
+
+
+        public string _bufferPosition;
+
+        public string BufferPosition
+        {
+            get { return _bufferPosition; }
+            set
+            {
+                _bufferPosition = value;
+                RaisePropertyChanged(() => BufferPosition);
+            }
         }
 
         public int Position
@@ -88,7 +107,11 @@ namespace MyMediaPlayer.Core.ViewModels
 
         public void OnPlayFileCommand()
         {
+            //start buffer
             MediaPlayer.PlayPause();
         }
+
+
+
     }
 }
